@@ -93,8 +93,8 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "("
+          "type": "SYMBOL",
+          "name": "open_paren"
         },
         {
           "type": "SEQ",
@@ -130,8 +130,8 @@
           ]
         },
         {
-          "type": "STRING",
-          "value": ")"
+          "type": "SYMBOL",
+          "name": "close_paren"
         }
       ]
     },
@@ -175,6 +175,14 @@
           }
         }
       ]
+    },
+    "open_paren": {
+      "type": "STRING",
+      "value": "("
+    },
+    "close_paren": {
+      "type": "STRING",
+      "value": ")"
     },
     "ident": {
       "type": "PATTERN",

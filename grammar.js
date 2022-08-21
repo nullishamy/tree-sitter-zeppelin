@@ -26,9 +26,9 @@ module.exports = grammar({
     _arg: $ => choice($.string, $.number, $.fn, $.property),
 
     arguments: $ => seq(
-      '(',
+       $.open_paren,
        seq($._arg, optional(repeat(seq(",", $._arg)))),
-      ')'
+       $.close_paren,
     ),
 
     property: $ => seq(
@@ -36,6 +36,8 @@ module.exports = grammar({
       field("values", optional(repeat(seq('.', $.ident))))
     ),
     
+    open_paren: $ => '(',
+    close_paren: $ => ')',
     ident: $ => /[a-zA-Z]+/,
     string: $ => /"[^"]*"/,
     number: $ => /\d+/,

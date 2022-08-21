@@ -8,11 +8,19 @@
       "required": true,
       "types": [
         {
+          "type": "close_paren",
+          "named": true
+        },
+        {
           "type": "fn",
           "named": true
         },
         {
           "type": "number",
+          "named": true
+        },
+        {
+          "type": "open_paren",
           "named": true
         },
         {
@@ -113,14 +121,6 @@
     }
   },
   {
-    "type": "(",
-    "named": false
-  },
-  {
-    "type": ")",
-    "named": false
-  },
-  {
     "type": ",",
     "named": false
   },
@@ -129,11 +129,19 @@
     "named": false
   },
   {
+    "type": "close_paren",
+    "named": true
+  },
+  {
     "type": "ident",
     "named": true
   },
   {
     "type": "number",
+    "named": true
+  },
+  {
+    "type": "open_paren",
     "named": true
   },
   {

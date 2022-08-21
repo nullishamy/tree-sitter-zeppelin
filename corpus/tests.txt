@@ -40,8 +40,9 @@ function call one string arg
     (fn
       (ident)
       (arguments
+        (open_paren)
         (string)
-      ))))
+        (close_paren)))))
 
 ================================================================================
 function call two string args
@@ -54,9 +55,10 @@ function call two string args
     (fn
       (ident)
       (arguments
+        (open_paren)
         (string)
         (string)
-      ))))
+        (close_paren)))))
 
 ================================================================================
 function call three string args
@@ -69,10 +71,11 @@ function call three string args
     (fn
       (ident)
       (arguments
+        (open_paren)
         (string)
         (string)
         (string)
-      ))))
+        (close_paren)))))
 
 ================================================================================
 function call one number arg
@@ -85,8 +88,9 @@ function call one number arg
     (fn
       (ident)
       (arguments
+        (open_paren)
         (number)
-      ))))
+        (close_paren)))))
 
 
 ================================================================================
@@ -100,9 +104,10 @@ function call two number args
     (fn
       (ident)
       (arguments
+        (open_paren)
         (number)
         (number)
-      ))))
+        (close_paren)))))
 
 ================================================================================
 function call one property arg
@@ -115,10 +120,11 @@ function call one property arg
     (fn
       (ident)
       (arguments
+        (open_paren)
         (property
           (ident)
-          (ident)
-        )))))
+          (ident))
+        (close_paren)))))
 
 ================================================================================
 one block with top text
@@ -131,10 +137,11 @@ top text
     (fn
       (ident)
       (arguments
+        (open_paren)
         (property
           (ident)
-          (ident)
-        )))))
+          (ident))
+        (close_paren)))))
 
 
 ================================================================================
@@ -148,10 +155,11 @@ bottom text
     (fn
       (ident)
       (arguments
+        (open_paren)
         (property
           (ident)
-          (ident)
-        )))))
+          (ident))
+        (close_paren)))))
 
 ================================================================================
 two blocks with top text
@@ -165,16 +173,22 @@ top text
     (fn
       (ident)
       (arguments
+        (open_paren)
         (property
           (ident)
-          (ident)))))
+          (ident)
+        )
+        (close_paren))))
   (eval_block
     (fn
       (ident)
       (arguments
+        (open_paren)
         (property
           (ident)
-          (ident))))))
+          (ident)
+        )
+        (close_paren)))))
           
 ================================================================================
 two blocks with bottom text
@@ -188,13 +202,19 @@ bottom text
     (fn
       (ident)
       (arguments
+        (open_paren)
         (property
           (ident)
-          (ident)))))
+          (ident)
+        )
+        (close_paren))))
   (eval_block
     (fn
       (ident)
       (arguments
+        (open_paren)
         (property
           (ident)
-          (ident))))))
+          (ident)
+        )
+        (close_paren)))))

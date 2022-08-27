@@ -45,6 +45,18 @@
         {
           "type": "fn",
           "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "property",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
         }
       ]
     }
@@ -119,10 +131,6 @@
         }
       ]
     }
-  },
-  {
-    "type": ",",
-    "named": false
   },
   {
     "type": ".",

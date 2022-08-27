@@ -1,3 +1,7 @@
-{
-    set("var", "value")
-}
+
+
+{if(user, "true", "false")}
+{if(user.bot, "true", "false")}
+{user.bot}
+{user.system}
+

@@ -112,6 +112,10 @@
           {
             "type": "ident",
             "named": true
+          },
+          {
+            "type": "number",
+            "named": true
           }
         ]
       }

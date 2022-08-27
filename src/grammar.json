@@ -12,7 +12,7 @@
           },
           {
             "type": "PATTERN",
-            "value": "[a-zA-Z0-9\\s\\n]+"
+            "value": "[^{})]+"
           }
         ]
       }
@@ -182,8 +182,17 @@
                       "value": "."
                     },
                     {
-                      "type": "SYMBOL",
-                      "name": "ident"
+                      "type": "CHOICE",
+                      "members": [
+                        {
+                          "type": "SYMBOL",
+                          "name": "ident"
+                        },
+                        {
+                          "type": "SYMBOL",
+                          "name": "number"
+                        }
+                      ]
                     }
                   ]
                 }

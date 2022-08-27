@@ -6,10 +6,12 @@ module.exports = grammar({
   rules: {
     source_file: $ => repeat(
       choice(
-        $.eval_block, 
-        /[a-zA-Z0-9\s\n]+/,
+        $.content,
+        $.eval_block
       )
     ), 
+
+    content: $ => /[^{})]+/,
 
     eval_block: $ => seq(
       '{', 
@@ -40,7 +42,7 @@ module.exports = grammar({
     property: $ => seq(
       field("base", $.ident),
       // `args` is accessed using a digit, so we need to allow that here
-      field("values", optional(repeat(seq('.', choice($.ident, $.dig)))))
+      field("values", optional(repeat(seq('.', choice($.ident, $.number)))))
     ),
     
     open_paren: $ => '(',
